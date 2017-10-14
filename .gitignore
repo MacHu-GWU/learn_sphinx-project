@@ -1,3 +1,9 @@
+# User Settings
+learn_sphinx_venv/
+learn_sphinx.egg-info/
+learn_sphinx-*/
+index.rst
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
