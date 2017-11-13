@@ -1,12 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-"""
-Package Description.
-"""
 
 __version__ = "0.0.1"
-__short_description__ = "Package short description."
+__short_description__ = "Test project for learning sphinx doc."
 __license__ = "MIT"
 __author__ = "Sanhe Hu"
 __author_email__ = "husanhe@gmail.com"
