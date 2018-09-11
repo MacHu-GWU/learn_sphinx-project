@@ -89,7 +89,6 @@ pygments_style = 'sphinx'
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True
 
-
 # -- Options for HTML output ----------------------------------------------
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
@@ -197,7 +196,6 @@ html_theme_options = {
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'learn_sphinxdoc'
 
-
 # -- Options for LaTeX output ---------------------------------------------
 
 latex_elements = {
@@ -226,7 +224,6 @@ latex_documents = [
      u'Sanhe Hu', 'manual'),
 ]
 
-
 # -- Options for manual page output ---------------------------------------
 
 # One entry per manual page. List of tuples
@@ -235,7 +232,6 @@ man_pages = [
     (master_doc, 'learn_sphinx', 'learn_sphinx Documentation',
      [author], 1)
 ]
-
 
 # -- Options for Texinfo output -------------------------------------------
 
@@ -248,8 +244,14 @@ texinfo_documents = [
      'Miscellaneous'),
 ]
 
-
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {'https://docs.python.org/': None}
 
 autodoc_member_order = 'bysource'
+
+
+rst_prolog = '\n.. include:: .custom-style.rst\n'
+
+
+def setup(app):
+    app.add_stylesheet('css/custom-style.css')

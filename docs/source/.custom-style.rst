@@ -1,0 +1,8 @@
+.. role:: red
+    :class: red
+
+.. role:: blue
+    :class: blue
+
+.. role:: green
+    :class: green
