@@ -43,6 +43,7 @@ extensions = [
     'sphinx.ext.mathjax',
     'sphinx.ext.ifconfig',
     'sphinx.ext.viewcode',
+    'sphinxcontrib.jinja',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -249,9 +250,30 @@ intersphinx_mapping = {'https://docs.python.org/': None}
 
 autodoc_member_order = 'bysource'
 
-
 rst_prolog = '\n.. include:: .custom-style.rst\n'
+
+jinja_contexts = {
+    'first_ctx': {'topic': "This is the Topic"}
+}
+
+
+def rstjinja(app, docname, source):
+    """
+    Render our pages as a jinja template for fancy templating goodness.
+    """
+    # print(app.builder)
+    # print(docname)
+    # print(source)
+    # Make sure we're outputting HTML
+    if app.builder.format != 'html':
+        return
+    src = source[0]
+    rendered = app.builder.templates.render_string(
+        src, app.config.html_context
+    )
+    source[0] = rendered
 
 
 def setup(app):
     app.add_stylesheet('css/custom-style.css')
+    # app.connect("source-read", rstjinja)  # event name, callback
