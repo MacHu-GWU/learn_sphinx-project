@@ -3,3 +3,5 @@ docfly
 sphinx_rtd_theme
 sphinx-bootstrap-theme
 sphinx-jinja
+sphinx-copybutton
+rstobj

@@ -1,6 +1,6 @@
-Sphinx and Jinja2
+Copy Code Block To Clipboard
 ==============================================================================
 
-.. jinja:: first_ctx
+.. code-block:: python
 
-    **{{ topic }}**
+    import sphinx
